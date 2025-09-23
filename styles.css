@@ -1,0 +1,74 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* Fundo com estilo geométrico */
+  background: linear-gradient(120deg, white 50%, #004b93 50%);
+}
+
+/* Logo no canto superior esquerdo */
+header {
+  position: absolute;
+  top: -5px;
+  left: 20px;
+}
+
+.logo {
+  height: 120px;
+}
+
+/* Modal */
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 320px;
+}
+
+.container h1 {
+  margin-bottom: 20px;
+  color: #004b93;
+}
+
+.container input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  background: #004b93;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.container button:hover {
+  background: #0066cc;
+}
+
+#error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
