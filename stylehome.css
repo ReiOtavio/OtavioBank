@@ -1,0 +1,300 @@
+/* General Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Color Palette */
+:root {
+  --primary-blue: #1e3a8a; /* Deep blue for professional banking feel */
+  --secondary-blue: #3b82f6; /* Lighter blue for accents */
+  --black: #111827; /* Dark gray-black for text and headers */
+  --white: #ffffff; /* Pure white for backgrounds and contrast */
+  --gray: #e5e7eb; /* Light gray for subtle backgrounds */
+}
+
+/* Logo Styles */
+.logo-container {
+  position: absolute;
+  top: -72px;
+  left: 20px;
+  z-index: 1000;
+  background: transparent;
+}
+
+.logo-img {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  background: transparent;
+}
+
+/* Header Styles */
+.top-bar {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 0.75rem 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 0;
+}
+
+/* User Area */
+.user-area {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#user-name {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.logout-btn {
+  background-color: var(--secondary-blue);
+  color: var(--white);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: var(--primary-blue);
+}
+
+/* Main Dashboard Styles */
+.dashboard {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Saldo Section */
+.saldo-section {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.saldo-section h2 {
+  color: var(--black);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.saldo-valor {
+  color: var(--primary-blue);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/* Ações Section */
+.acoes-section {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.acoes-section h2 {
+  color: var(--black);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.botoes-acoes {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-acao {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-acao:hover {
+  background-color: var(--secondary-blue);
+  transform: translateY(-2px);
+}
+
+/* Histórico Section */
+.historico-section {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.historico-section h2 {
+  color: var(--black);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.historico-lista {
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.historico-lista li {
+  padding: 1rem;
+  border-bottom: 1px solid var(--gray);
+  color: var(--black);
+  font-size: 1rem;
+}
+
+.historico-lista li:last-child {
+  border-bottom: none;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2000;
+  width: 320px;
+}
+
+.modal-content {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--black);
+}
+
+.modal-close:hover {
+  color: var(--primary-blue);
+}
+
+.modal-content h2 {
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+}
+
+.modal-content input,
+.modal-content select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid var(--gray);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.modal-submit {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  background: var(--primary-blue);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.modal-submit:hover {
+  background: var(--secondary-blue);
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  display: none;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .logo-container {
+    top: -72px;
+    left: 10px;
+    background: transparent;
+  }
+
+  .logo-img {
+    width: 150px;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    justify-content: center;
+  }
+
+  .botoes-acoes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-acao {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .saldo-valor {
+    font-size: 2rem;
+  }
+
+  .modal {
+    width: 90%;
+    max-width: 300px;
+  }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OtavioBank - Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Logo -->
+  <header>
+    <img src="logo.png" alt="OtavioBank Logo" class="logo">
+  </header>
+
+  <!-- Modal de login -->
+  <div class="container">
+    <h1>Entrar</h1>
+    <form id="loginForm">
+      <input type="text" id="loginUsername" placeholder="Usuário" required>
+      <input type="password" id="loginPassword" placeholder="Senha" required>
+
+      <button type="submit">Entrar</button>
+
+      <p class="signup-text">
+        Não tem uma conta?
+        <a href="index.html" class="signup-link">Criar Conta</a>
+      </p>
+
+      <p id="login-error-message"></p>
+    </form>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

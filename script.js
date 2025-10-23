@@ -30,10 +30,23 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
     errors.push("As senhas não coincidem.");
   }
 
+  // 🔹 Nova verificação: usuário já existe
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+  const userExists = users.some(u => u.username === username);
+  if (userExists) {
+    errors.push("Usuário já existente. Escolha outro nome.");
+  }
+
   if (errors.length > 0) {
+    errorMessage.style.color = "red";
     errorMessage.innerHTML = errors.join("<br>");
   } else {
+    // 🔹 Salvando no "banco local"
+    users.push({ username, password });
+    localStorage.setItem("users", JSON.stringify(users));
+
     errorMessage.style.color = "green";
     errorMessage.innerHTML = "Conta criada com sucesso!";
+    document.getElementById("signupForm").reset();
   }
 });

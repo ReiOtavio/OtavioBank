@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OtavioBank - Área do Cliente</title>
+  <link rel="stylesheet" href="stylehome.css">
+</head>
+<body>
+  <div class="logo-container">
+    <img src="logohome.png" alt="Logo OtavioBank" class="logo-img">
+  </div>
+
+  <header class="top-bar">
+    <div class="user-area">
+      <span id="user-name"></span>
+      <button id="logoutBtn" class="logout-btn">Sair</button>
+    </div>
+  </header>
+
+  <main class="dashboard">
+    <section class="saldo-section">
+      <h2>Saldo disponível</h2>
+      <p id="saldo" class="saldo-valor">R$ 0,00</p>
+    </section>
+
+    <section class="acoes-section">
+      <h2>Ações rápidas</h2>
+      <div class="botoes-acoes">
+        <button id="btnPix" class="btn-acao">💸 Fazer PIX</button>
+        <button id="btnDepositar" class="btn-acao">💰 Depositar</button>
+        <button id="btnSacar" class="btn-acao">🏧 Sacar</button>
+        <button id="btnEmprestimo" class="btn-acao">📄 Fazer Empréstimo</button>
+      </div>
+    </section>
+
+    <section class="historico-section">
+      <h2>Histórico de Transações</h2>
+      <ul id="historico-lista" class="historico-lista">
+        <li>Nenhuma transação encontrada.</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Modal Structure -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="modal-close" class="modal-close">&times;</span>
+      <h2 id="modal-title"></h2>
+      <form id="modal-form">
+        <div id="modal-fields"></div>
+        <p id="modal-error" class="error-message"></p>
+        <button type="submit" id="modal-submit" class="modal-submit">Confirmar</button>
+      </form>
+    </div>
+  </div>
+  <div id="modal-overlay" class="modal-overlay"></div>
+
+  <script src="home.js"></script>
+</body>
+</html>

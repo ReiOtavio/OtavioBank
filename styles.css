@@ -72,3 +72,42 @@ header {
   font-size: 14px;
   margin-top: 10px;
 }
+
+.login-text {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.login-link {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.login-link:hover {
+  color: #004b93;
+  text-decoration: underline;
+}
+
+.signup-text {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.signup-link {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.signup-link:hover {
+  color: #004b93;
+  text-decoration: underline;
+}
+
